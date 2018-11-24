@@ -512,7 +512,8 @@ template {
 
 .feedback {
   padding: 94px 0;
-  background: url("../img/feedback/feedback-bg.jpg") no-repeat center right -10%;
+  background: url("../img/feedback/feedback-bg.jpg") no-repeat top right;
+  background-size: contain;
 }
 
 .feedback-contacts {
