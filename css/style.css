@@ -515,6 +515,53 @@ template {
   background: url("../img/feedback/feedback-bg.jpg") no-repeat center right -10%;
 }
 
+.feedback-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 26px;
+}
+
+.feedback-contacts__text {
+  width: 49%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.feedback-contacts__tel {
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 18px;
+}
+
+.feedback-contacts__tel::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -60px;
+  min-width: 40px;
+  height: 40px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  background-image: url(../img/feedback/feedback-phone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback-contacts__phone {
+  display: block;
+  font-size: 15px;
+  color: #333333;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+}
+
 .form {
   max-width: 575px;
 }

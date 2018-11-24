@@ -1,7 +1,40 @@
 .feedback
   padding: 94px 0
   background: url('../img/feedback/feedback-bg.jpg') no-repeat center right -10%
+  &-contacts
+    display: flex
+    justify-content: space-between
+    margin-top: 26px
+    &__text
+      width: 49%
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+    &__tel
+      position: relative
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+      margin-right: 18px
+      &::before
+        content: ''
+        position: absolute
+        top: 6px
+        left: -60px
+        min-width: 40px
+        height: 40px
+        border: 2px solid $feedback-phone
+        border-radius: 50%
+        background-image: url(../img/feedback/feedback-phone.png)
+        background-repeat: no-repeat
+        background-position: center
+    &__phone
+      display: block
+      font-size: 15px
 
+      color: $text-color
+      text-decoration: none
+      +bold
 .form
   max-width: 575px
   &__title
