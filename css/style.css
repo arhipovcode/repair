@@ -461,9 +461,11 @@ template {
   margin-top: 20px;
 }
 
-.main-img {
+.main-image {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  position: relative;
+  left: 30px;
 }
 
 .main-advantages {
@@ -512,8 +514,21 @@ template {
 
 .feedback {
   padding: 94px 0;
-  background: url("../img/feedback/feedback-bg.jpg") no-repeat top right;
+  background: url("../img/feedback/feedback-bg.jpg") no-repeat right;
   background-size: contain;
+  position: relative;
+  z-index: 1;
+}
+
+.feedback:before {
+  content: '';
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
 }
 
 .feedback-contacts {
@@ -544,7 +559,7 @@ template {
 .feedback-contacts__tel::before {
   content: '';
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: -60px;
   min-width: 40px;
   height: 40px;
@@ -612,5 +627,180 @@ body {
 
 img {
   max-width: 100%;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+  .feedback:before {
+    width: 63%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 767px;
+  }
+  .main-text__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .main-image {
+    left: 20px;
+    top: 50px;
+  }
+  .feedback {
+    background: #ffffff;
+  }
+  .form {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .hidden-xs {
+    display: none;
+  }
+  .main-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-text {
+    max-width: 400px;
+    margin: auto;
+  }
+  .main-text__title {
+    text-align: center;
+  }
+  .main-image {
+    top: 0;
+  }
+  .feedback {
+    padding: 40px;
+  }
+  .feedback-contacts__text {
+    width: 40%;
+  }
+  .feedback-contacts__tel {
+    margin: 0;
+  }
+  .feedback-contacts__tel:before {
+    left: -50px;
+  }
+  .feedback-contacts__phone {
+    text-align: center;
+  }
+  .form {
+    max-width: 500px;
+    margin: auto;
+  }
+  .form__input {
+    width: 50%;
+  }
+  .form__input:first-child {
+    margin: 0;
+    width: 49%;
+  }
+  .form__title {
+    max-width: 460px;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .form__subtitle {
+    max-width: 330px;
+    text-align: center;
+    margin: 0 auto 30px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-wrap {
+    padding: 10px 0 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header-text__contacts {
+    text-align: center;
+    margin: 10px 0 20px;
+  }
+  .main {
+    padding: 30px 0;
+  }
+  .main-text__title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .main-advantages {
+    font-size: 14px;
+  }
+  .main-advantages__img {
+    margin-right: 20px;
+  }
+  .main-image {
+    left: 5px;
+  }
+  .feedback {
+    padding: 20px 0 30px;
+  }
+  .feedback-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .feedback-contacts__text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .feedback-contacts__tel {
+    text-align: center;
+    width: 55%;
+    margin: auto;
+  }
+  .feedback-contacts__tel:before {
+    left: -45px;
+  }
+  .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__input:first-child {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .form__title {
+    font-size: 20px;
+  }
+  .form__button {
+    font-size: 14px;
+    padding: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
