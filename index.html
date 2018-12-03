@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ремонт квартир</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slick.css">
 </head>
 <body>
 
@@ -85,7 +86,7 @@
   </section>
 
 
-  <div class="modal" id="modal-callback">
+  <div class="modal" id="modal-callback">  <!-- модальное окно -->
     <div class="modal__dialog">
 
       <div class="modal__close">&#10008;</div>
@@ -153,6 +154,22 @@
       </div> <!-- /.modal-form -->
     </div> <!-- /.modal__dialog -->
   </div>
+  
+  <section class="portfolio">
+    <div class="container">
+      <h2 class="section-title section-title_center">Работая с 2007 года,<br>
+      мы сделали более 500 ремонтов в квартирах и домах</h2>
+
+      <div class="slider">
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+        <div class="slider__item"></div>
+      </div>
+    </div>
+  </section>
 
   
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -176,5 +193,15 @@
   });
 </script>
 
+<!-- slickSlider -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('.slider').slick({
+      });
+    });
+</script>
+  
 </body>
 </html>

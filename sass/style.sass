@@ -8,6 +8,7 @@
 @import 'main'
 @import 'feedback'
 @import 'modal'
+@import 'portfolio'
 
 *, *:after, *:before 
   box-sizing: border-box  
@@ -17,9 +18,15 @@ body
 .container
   width: 1170px
   margin: 0 auto
-
+input
+  outline: none
 img
   max-width: 100%
-
+.section
+  &-title
+    +bold
+    line-height: 45px
+    &_center
+      text-align: center
 
 @import 'media'
