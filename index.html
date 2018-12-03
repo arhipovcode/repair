@@ -20,7 +20,7 @@
           <a class="header-text__phone" href="tel:+74954225131">+7 (495) 42-251-31</a>
         </div>
         <div class="header-text__button">
-        <button class="button">Перезвоните <span class="hidden-xs">мне</span></button>
+        <button class="button" id="button-callback">Перезвоните <span class="hidden-xs">мне</span></button>
         </div>
       </div>
     </div>
@@ -83,6 +83,98 @@
       </div>
     </div>
   </section>
+
+
+  <div class="modal" id="modal-callback">
+    <div class="modal__dialog">
+
+      <div class="modal__close">&#10008;</div>
+        <div class="modal-content">
+            <div class="modal-price">
+
+              <div class="modal-wrap">
+                <img src="img/modal-window/photo-1.png" alt="Ванная комната">
+                <div class="wrap-text">
+                  <h4 class="wrap-text__title">Ванная комната</h4>
+                  <p class="wrap-text__description">135*150 - <span class="wrap-text__text-bold">31 000 руб.</span></p>
+                  <p class="wrap-text__description">170*170 - <span class="wrap-text__text-bold">43 000 руб.</span></p>
+                </div>
+              </div>
+
+              <div class="modal-wrap">
+                <img src="img/modal-window/photo-2.png" alt="Туалет">
+                <div class="wrap-text">
+                  <h4 class="wrap-text__title">Туалет</h4>
+                  <p class="wrap-text__description">135*70 - <span class="wrap-text__text-bold">14 000 руб.</span></p>
+                </div>
+              </div>
+
+              <div class="modal-wrap">
+                <img src="img/modal-window/photo-3.png" alt="Совмещенный санузел">
+                <div class="wrap-text">
+                  <h4 class="wrap-text__title">Совмещенный санузел</h4>
+                  <p class="wrap-text__description">135*210 - <span class="wrap-text__text-bold">54 000 руб.</span></p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="modal-info">
+              <h4 class="modal-info__text">В стоимость работ входит</h4>
+              <ul>
+              <li><span class="modal-info__list">Демонтаж старого покрытия стен и пола</span></li>
+              <li><span class="modal-info__list">Выравнивание стен гипсовыми составами</span></li>
+              <li><span class="modal-info__list">Грунтовка стен и пола антисептиком, бетоноконтактом</span></li>
+              <li><span class="modal-info__list">Монтаж кафельной плитки на полу и стенах</span></li>
+              <li><span class="modal-info__list">Установка реечного или натяжного потолка, светильников</span></li>
+              <li><span class="modal-info__list">Монтаж двери с коробкой</span></li>
+              </ul>
+            </div>
+        </div> <!-- modal-content -->
+
+
+      <div class="modal-form">
+
+        <h3 class="modal-form__title">Узнайте точную стоимость ремонта по телефону!</h3>
+        <p class="modal-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</p>
+
+        <form action="#">
+          <input type="text" placeholder="Ваше имя">
+          <input type="tel" placeholder="Ваш телефон">
+          <button type="submit" class="button modal-form__button">Узнать стоимость</button>
+        </form>
+
+        <div class="modal-form__prescription">
+          Или Вы можете перезвонить нам сами
+          по телефону:
+          <a class="modal-form__phone" href="tel:+78182425131">+7 (8182) 42-51-31</a>
+        </div>
+
+      </div> <!-- /.modal-form -->
+    </div> <!-- /.modal__dialog -->
+  </div>
+
   
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $(document).ready( function(){
+    $('#button-callback').on('click', function() {
+      $('#modal-callback').toggleClass('modal_visible');
+    });
+    $('.modal__close').on('click', function() {
+      $('#modal-callback').toggleClass('modal_visible');
+    });
+  });
+</script> -->
+
+<script>
+  document.querySelector('#button-callback').addEventListener('click', function(){
+    document.querySelector('#modal-callback').classList.toggle('modal_visible')
+  });
+  document.querySelector('.modal__close').addEventListener('click', function(){
+    document.querySelector('#modal-callback').classList.toggle('modal_visible')
+  });
+</script>
+
 </body>
 </html>
