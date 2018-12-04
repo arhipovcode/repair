@@ -851,7 +851,7 @@ template {
 }
 
 .request-faq__title {
-  width: 70%;
+  width: 80%;
   font-size: 22px;
   font-weight: 700;
   line-height: 33px;
@@ -896,7 +896,7 @@ template {
 }
 
 .request-form {
-  padding: 83px 0 93px 124px;
+  padding: 83px 0 93px 114px;
   text-align: center;
   font-weight: 400;
   width: 40%;
