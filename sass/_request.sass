@@ -1,0 +1,74 @@
+.request
+  background-image: url(../img/request/bg-request.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  &-wrap
+    display: flex
+  &-faq
+    padding: 83px 0
+    background-color: $request-bg
+    width: 60%
+    &__title
+      width: 70%
+      font-size: 22px
+      font-weight: 700
+      line-height: 33px
+      margin-bottom: 30px
+    &__subtitle
+      font-size: 16px
+      font-weight: 400
+      line-height: 45px
+      margin-bottom: 55px
+    &-list
+      ol
+        font-size: 18px
+        font-weight: 400
+        padding: 30px
+        line-height: 23px
+      &__item
+        margin-bottom: 37px
+        padding-left: 37px
+        position: relative
+        width: 70%
+        &:before
+          content: ''
+          display: block
+          width: 35px
+          height: 35px
+          border: 2px solid #000000
+          position: absolute
+          left: -31px
+          top: -5px
+          border-radius: 50%
+        &:nth-child(3)
+          margin-top: 43px
+  &-form
+    padding: 83px 0 93px 124px
+    text-align: center
+    font-weight: 400
+    width: 40%
+    &__title
+      font-size: 22px
+      font-weight: 700
+      line-height: 33px
+    &__subtitle
+      font-size: 16px
+      line-height: 35px
+      margin: 35px 0 43px
+    &__input
+      width: 100%
+      padding: 24px
+      border-radius: 10px
+      border: 1px solid $input-border
+      margin-bottom: 15px
+    &__btn
+      width: 100%
+      margin-top: 15px
+      margin-bottom: 29px
+      padding: 26px
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+    &__prescription
+      font-size: 15px

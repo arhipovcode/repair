@@ -99,20 +99,8 @@
       margin: 0 auto 30px
       line-height: 21px
   .modal
-    position: absolute
-    &__dialog
-      flex-wrap: wrap
-      border-bottom: 30rem solid $input-border
-    &__close
-      position: absolute
     &-content
-      width: 100%
-      padding: 50px 50px
-    &-price
-      margin: 0
-    &-info
-      ul
-        margin: 0
+      display: none
     &-form
       width: 100%
 
@@ -182,28 +170,6 @@
     &__button
       font-size: 14px
       padding: 24px
-
-  .modal
-    &-wrap
-      display: flex
-      flex-direction: column
-      margin: 0 0 15px 0
-    &-info
-      margin: 0
-      &__text
-        text-align: center
-    &-form
-      padding: 50px 10px
-      &__phone
-        font-size: 20px
-  .wrap
-    &-text
-      margin: 15px 0 0 0
-      text-align: center
-      &__title
-        &:before
-          left: 0
-          width: 100%
   
   .section
     &-title
