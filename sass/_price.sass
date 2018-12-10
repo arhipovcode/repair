@@ -1,0 +1,109 @@
+.price
+  padding: 100px 0
+  &__title
+    margin: 0 auto 58px
+    max-width: 515px
+  &__subtitle
+    margin-bottom: 59px
+  &-wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+.card
+  max-width: 370px
+  min-height: 410px
+  text-align: center
+  border: 1px solid $price-border
+  padding-bottom: 47px
+  margin-bottom: 30px
+  transition: all 0.3s
+  &:hover
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+    & > .card__img-wrap:after
+      transition: 0.5s
+      height: 98.8%
+  &__img
+    &-wrap
+      position: relative
+      &:after
+        content: ''
+        width: 100%
+        height: 0%
+        position: absolute
+        left: 0
+        bottom: 0
+        background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+  &__title
+    margin-top: 39px
+    margin-bottom: 31px
+    font-size: 18px
+  &__link
+    color: $text-color
+    font-size: 16px
+    +bold
+    text-decoration: none
+    display: inline-block
+    position: relative
+    &:after
+      content: ''
+      width: 100%
+      height: 3px
+      background-color: $primary-color
+      display: block
+      position: absolute
+      bottom: -3px
+      transition: all 0.3s
+    &:hover
+      &:after
+        height: 13px
+        z-index: -1
+
+.steps
+  &__title
+    width: 651px
+    margin: 155px auto 59px
+  &__subtitle
+    margin-bottom: 69px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    text-align: center
+    flex-wrap: wrap
+    &__img
+      margin: 0 auto 30px
+      width: 100px
+      height: 100px
+      border: 3px solid $primary-color
+      border-radius: 50%
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 35px
+      position: relative
+      &:after
+        content: ''
+        background-image: url(../img/price/arrow-steps.png)
+        background-repeat: no-repeat
+        width: 72px
+        height: 25px
+        position: absolute
+        left: 140px
+        top: -20px
+      &-1
+        background-image: url(../img/price/item-1.png)
+      &-2
+        background-image: url(../img/price/item-2.png)
+      &-3
+        background-image: url(../img/price/item-3.png)
+      &-4
+        background-image: url(../img/price/item-4.png)
+      &-5
+        background-image: url(../img/price/item-5.png)
+        &:after
+          display: none
+    &__item
+    &__prescription
+      max-width: 175px
+      line-height: 20px
+      font-size: 14px
+      

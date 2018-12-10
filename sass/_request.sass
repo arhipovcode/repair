@@ -1,13 +1,32 @@
 .request
-  background-image: url(../img/request/bg-request.jpg)
-  background-repeat: no-repeat
-  background-size: cover
-  background-position: center center
+  position: relative
+  &-bg
+    display: flex
+    &:before
+      content: ''
+      width: 55%
+      height: 100%
+      left: 0
+      top: 0
+      position: absolute
+      z-index: -1
+      background-color: $request-bg
+    &:after
+      content: ''
+      width: 45%
+      height: 100%
+      right: 0
+      top: 0
+      position: absolute
+      z-index: -1
+      background-image: url(../img/request/bg-request.jpg)
+      background-repeat: no-repeat
+      background-position: center 
+      background-size: cover
   &-wrap
     display: flex
   &-faq
-    padding: 83px 0
-    background-color: $request-bg
+    padding: 83px 0 0 80px
     width: 60%
     &__title
       width: 80%
@@ -25,14 +44,16 @@
         font-size: 18px
         font-weight: 400
         padding: 30px
-        line-height: 23px
+        line-height: 27px
       &__item
         margin-bottom: 37px
         padding-left: 37px
         position: relative
         width: 70%
+        list-style-type: none
         &:before
-          content: ''
+          content: '1'
+          text-align: center
           display: block
           width: 35px
           height: 35px
@@ -41,10 +62,20 @@
           left: -31px
           top: -5px
           border-radius: 50%
+          line-height: 30px
+        &:nth-child(2)
+          &:before
+            content: '2'
         &:nth-child(3)
-          margin-top: 43px
+          margin-top: 0
+          &:before
+            content: '3'
+        &:nth-child(4)
+          &:before
+            content: '4'
+          
   &-form
-    padding: 83px 0 93px 114px
+    padding: 83px 0 93px 80px
     text-align: center
     font-weight: 400
     width: 40%
@@ -57,13 +88,13 @@
       line-height: 35px
       margin: 35px 0 43px
     &__input
-      width: 100%
+      width: 90%
       padding: 24px
       border-radius: 10px
       border: 1px solid $input-border
       margin-bottom: 15px
     &__btn
-      width: 100%
+      width: 90%
       margin-top: 15px
       margin-bottom: 29px
       padding: 26px
