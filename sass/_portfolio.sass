@@ -1,10 +1,18 @@
 .portfolio
   background-color: $light-bg-color
   padding: 100px 0 125px
-  background-image: url(../img/portfolio/slider-bg.jpg)
-  background-repeat: no-repeat
-  background-position: center center
-  background-size: cover
+  position: relative
+  z-index: 1
+  &-bg
+    &:before
+      content: ''
+      background-image: url(../img/portfolio/bg-slider.jpg)
+      left: 0
+      top: 0
+      position: absolute
+      width: 55%
+      height: 100%
+      z-index: -1
 .portfolio
   &__title
     margin-bottom: 99px

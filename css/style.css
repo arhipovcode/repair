@@ -521,10 +521,21 @@ template {
 
 .feedback {
   padding: 94px 0;
-  background: url("../img/feedback/feedback-bg.jpg") no-repeat right;
-  background-size: contain;
   position: relative;
   z-index: 1;
+}
+
+.feedback-bg:after {
+  content: '';
+  background-image: url(../img/feedback/feedback-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  z-index: -2;
 }
 
 .feedback:before {
@@ -793,10 +804,19 @@ template {
 .portfolio {
   background-color: #f5f5f5;
   padding: 100px 0 125px;
-  background-image: url(../img/portfolio/slider-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-bg:before {
+  content: '';
+  background-image: url(../img/portfolio/bg-slider.jpg);
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 55%;
+  height: 100%;
+  z-index: -1;
 }
 
 .portfolio__title {
@@ -1254,7 +1274,8 @@ template {
 .garant__title {
   font-size: 30px;
   line-height: 45px;
-  margin: 0 0 99px 0;
+  margin: 0 auto 99px;
+  width: 55%;
 }
 
 .garant-contract {
@@ -1321,11 +1342,49 @@ img {
   text-align: center;
 }
 
+@media (max-width: 1380px) {
+  .main-image {
+    left: 0;
+  }
+  .main-image img {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@media (max-width: 1325px) {
+  .main-image {
+    left: 0;
+    top: 55px;
+  }
+  .main-image img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media (max-width: 1325px) {
+  .main-image {
+    left: 0;
+    top: 25px;
+  }
+  .main-image img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     width: 970px;
   }
   .feedback:before {
+    width: 63%;
+  }
+  .feedback-bg:after {
+    width: 47%;
+  }
+  .portfolio-bg:before {
     width: 63%;
   }
   .slider__item img {
@@ -1413,6 +1472,9 @@ img {
   .garant {
     padding: 100px 0;
   }
+  .garant__title {
+    width: 70%;
+  }
   .garant-wrap {
     margin-bottom: 80px;
   }
@@ -1433,8 +1495,11 @@ img {
     left: 0;
     top: 50px;
   }
-  .feedback {
-    background: #ffffff;
+  .feedback-bg:after {
+    display: none;
+  }
+  .portfolio-bg:before {
+    width: 60%;
   }
   .form {
     margin: auto;
@@ -1549,7 +1614,7 @@ img {
     padding: 50px 0;
   }
   .garant__title {
-    margin: 0 0 60px 0;
+    margin: 0 auto 60px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -1619,12 +1684,19 @@ img {
     max-width: 500px;
     margin: auto;
   }
+  .form-wrap-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .form__input {
-    width: 50%;
+    width: 48%;
   }
   .form__input:first-child {
-    margin: 0;
-    width: 49%;
+    margin: 0 0 30px 0;
   }
   .form__title {
     max-width: 460px;
@@ -1657,12 +1729,12 @@ img {
   }
   .request-bg:before {
     width: 100%;
-    height: 48%;
+    height: 50%;
     top: 0;
   }
   .request-bg:after {
     width: 100%;
-    height: 52%;
+    height: 50%;
     bottom: 0;
     top: auto;
   }
@@ -1766,7 +1838,8 @@ img {
     top: 26px;
   }
   .garant__title {
-    margin: 0 0 50px 0;
+    margin: 0 auto 50px;
+    width: 85%;
   }
   .garant-contract {
     -webkit-box-orient: vertical;
@@ -1825,12 +1898,25 @@ img {
     padding: 9px 15px;
     font-size: 10px;
   }
+  .modal-form__button {
+    padding: 26px;
+    font-size: 16px;
+  }
+  .modal-form__phone {
+    font-size: 20px;
+  }
   .main {
     padding: 5px 0 40px;
   }
   .main-text__title {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 27px;
+    width: 90%;
+    margin: 20px auto 40px;
+  }
+  .main-text__title span {
+    font-size: 16px;
+    line-height: 22px;
   }
   .main-advantages {
     width: 95%;
@@ -1859,10 +1945,6 @@ img {
     width: 55%;
     margin: auto;
   }
-  .feedback-contacts__tel:before {
-    left: -45px;
-    top: 15px;
-  }
   .form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1875,6 +1957,12 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
+  .form-wrap-input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .form__input {
     width: 95%;
     margin: 0 auto 20px;
@@ -1885,13 +1973,14 @@ img {
     margin: 0 auto 20px;
   }
   .form__title {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 27px;
+    width: 80%;
   }
   .form__button {
     font-size: 15px;
-    line-height: 22px;
-    padding: 12px 35px;
+    line-height: 20px;
+    padding: 12px 60px;
     width: 95%;
     margin: auto;
   }
@@ -1899,8 +1988,8 @@ img {
     padding: 30px 0 100px;
   }
   .section-title {
-    width: 90%;
-    font-size: 18px;
+    max-width: 90%;
+    font-size: 20px;
     line-height: 26px;
     margin-bottom: 30px;
   }
@@ -1908,13 +1997,14 @@ img {
     padding: 30px 0;
   }
   .request-faq__title {
-    font-size: 16px;
-    line-height: 24px;
-    width: 90%;
+    font-size: 20px;
+    line-height: 26px;
+    width: 85%;
     margin: 0 auto 20px;
   }
   .request-faq__subtitle {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 24px;
     width: 90%;
     margin: 0 auto 30px;
   }
@@ -1941,13 +2031,15 @@ img {
     padding: 0 0 50px;
   }
   .request-form__title {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
-    margin-top: 50px;
+    margin-top: 45px;
+    width: 90%;
   }
   .request-form__subtitle {
-    font-size: 14px;
+    font-size: 18px;
     margin: 20px auto 30px;
+    width: 90%;
   }
   .request-form__input {
     padding: 17px 0 17px 25px;
@@ -1960,6 +2052,10 @@ img {
     font-size: 14px;
     width: 80%;
   }
+  .card {
+    margin: 0 0 20px;
+    min-height: 360px;
+  }
   .price {
     padding: 30px 0;
   }
@@ -1969,9 +2065,15 @@ img {
   }
   .price__title {
     margin-bottom: 30px;
+    max-width: 95%;
+  }
+  .price__subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
   }
   .steps__subtitle {
     margin-bottom: 30px;
+    font-size: 18px;
   }
   .steps-wrap__item {
     width: 100%;
@@ -1984,22 +2086,29 @@ img {
     display: none;
   }
   .steps__title {
-    margin: 30px auto;
+    margin: 25px auto;
   }
   .yellow {
     padding: 30px 0;
   }
   .yellow__title {
-    font-size: 16px;
-    line-height: 23px;
-    width: 90%;
+    font-size: 17px;
+    line-height: 26px;
+    width: 100%;
+  }
+  .garant__title {
+    font-size: 19px;
+    line-height: 26px;
+    margin: 0 auto 50px;
+    width: 95%;
   }
   .contacts {
     padding: 30px 0;
   }
   .contacts__title {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 10px;
   }
   .mymap {
     height: 300px;
